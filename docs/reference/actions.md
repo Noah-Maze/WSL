@@ -1,8 +1,10 @@
 (reference::actions)=
 # GitHub actions
 
+<!-- TODO: intro paragraph  -->
+
 (reference::actions::download-rootfs)=
-## Download rootfs
+## download-rootfs
 Download the latest Rootfs tarball for a particular release of Ubuntu WSL.
 This can be used when you need better granularity than what is offered by [wsl-install](reference::actions::wsl-install), or you want to cache the rootfs.
 
@@ -20,7 +22,7 @@ Example usage:
 ```
 
 (reference::actions::wsl-install)=
-## WSL install
+## wsl-install
 > See also: [download-rootfs](reference::actions::download-rootfs)
 
 This action installs the Windows Subsystem for Linux application, and optionally an Ubuntu WSL application.
@@ -38,7 +40,7 @@ Example usage:
     distro: Ubuntu-20.04
 ```
 
-## WSL checkout
+## wsl-checkout
 This action checks out your repository in a WSL distro. If you want to check it out on the Windows file system, use the regular `actions/checkout` action instead. Example usage:
 
 Its arguments are:
@@ -56,7 +58,7 @@ Example usage:
     submodules: true
 ```
 
-## WSL bash
+## wsl-bash
 This action runs arbitrary bash code in your distro.
 
 Its arguments are:
