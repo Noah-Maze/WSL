@@ -36,19 +36,19 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install or update WSL
-        uses: ./.github/actions/wsl-install
+        uses: Ubuntu/WSL/.github/actions/wsl-install@main
         with:
           distro: Ubuntu
 
       - name: Checkout your repo into WSL
-        uses: ./.github/actions/wsl-checkout
+        uses: Ubuntu/WSL/.github/actions/wsl-checkout@main
         with:
           distro: Ubuntu
           working-dir: "~/myrepo"
 
       # You'll probably use this action if you program runs entirely inside WSL
       - name: Run bash inside WSL
-        uses: ./.github/actions/wsl-bash
+        uses: Ubuntu/WSL/.github/actions/wsl-bash@main
         with:
           distro: Ubuntu
           working-dir: "~/myrepo"
